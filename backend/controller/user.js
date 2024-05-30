@@ -27,13 +27,6 @@ const signUp=async(req,res)=>{
         })
     }
 
-    // const findUser=await User.findOne({username:user.username}).maxTimeMS(30000);
-
-    // if(findUser){
-    //     res.status(400).json({
-    //         msg:"user already exists"
-    //     })
-    // }
     let findUser;
         try {
             await User.findOne({username:user.username})
